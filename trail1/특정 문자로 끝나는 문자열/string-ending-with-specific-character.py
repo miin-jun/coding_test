@@ -1,17 +1,11 @@
-arr = []
-for _ in range(11):
-    string = input()
-    arr.append(string)
+arr = [input() for _ in range(10)]
+chr = input()
+found = False
 
-cnt = 0
-answer = []
-for str in arr[:10]:
-    if str[-1] == arr[-1]:
-        answer.append(str)
-        cnt+=1
-
-if cnt >0 :
-    for str in answer:
+for str in arr:
+    if chr == str[-1]:
+        found = True
         print(str)
-else:
+    
+if found == False:
     print("None")
